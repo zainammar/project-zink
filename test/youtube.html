@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Grid</title>
+    <link rel="stylesheet" href="css/profile-zone-fa.css">
+    
+</head>
+<style>
+    body {
+  background-color: #DFD0B8;
+}
+
+    .cursor {
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 123, 255, 0.5);
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        transition: transform 0.1s;
+        transform: translate(-50%, -50%);
+        display: none; /* Hidden by default */
+    }
+    /* box */
+    .box {
+        background-color: #DFD0B8;
+        color:#153448;
+        margin: 20px;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+    
+    .box:hover {
+        transform: scale(1.1);
+        background-color: #948979;
+        color:#DFD0B8;
+    }
+        </style>     
+ <!-- Row with 1 column Navbar -->
+ <div class="row-1">
+  <div class="topnav-2" id="myTopnav-2">
+      <a href="index.html">Home</a>
+      <a href="about.html"  class="active">About Me</a>
+      <a href="art.html">Art</a>
+      <a href="d-art.html">Digtal Art</a>
+      <a href="contact.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction3()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <script>
+    function myFunction3() {
+      var x = document.getElementById("myTopnav-2");
+      if (x.className === "topnav-2") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav-2";
+      }
+    }
+    </script>
+</div>
+<div class="cursor"></div>
+<!-- video BG section 1-->
+<div class="grid-container-v">
+  <!-- Background Video -->
+  <video autoplay muted loop class="background-video">
+    <source src="videos/fire-color.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content over the video -->
+  <div class="row-5 content-grid">
+    <div class="grid-item"></div>
+      <div class="grid-item">
+        <h1 class="heading-y"> 
+            <b>Zain ul Mursaleen </b>
+            <h2 class="heading-x">Production Designer & Visual Artist <br>
+        </h1>
+       <a href=""> <h2 class="button-1">Skill & Education</h2> </a> 
+       <a href="">  <h2 class="button-1">Exhibitions & Experience</h2> </a>
+    
+        </h2>
+ 
+      </div>
+      <div class="grid-item">
+        <br>
+        <img src="images/mursleen.png" alt="Placeholder Image">
+
+      </div>
+      <div class="grid-item"></div>
+  </div>
+</div>
+        <!-- Content over the video -->
+      <div class="row-2 content-grid">
+        <div class="grid-item">
+            <p class="heading-v">
+                <b>Artist Biography</b> <br>Zain ul Mursaleen is a Production Designer and a Visual Artist living and practicing In
+                Karachi. Grew up watching and learning design from his Father a graduate of JJ School
+                who formed one of the pioneer Advertising studios in Karachi.
+                Studied painting from CIAC in 2002 located at the Arts council of Pakistan. During his
+                studies, he worked designing furniture which later on became his obsession with
+                developing environments and sets for TV. For a decade worked with Geo tv networks.
+                From designing new-age cafes to restaurants his understanding of spaces and design
+                have matured.
+                In 2012 Formed Pakistan’s first Production design company PAINTED LENS and
+                created iconic set designs. Working commercially in a superfast industry he has also
+                passionately explored his search for ways to express his thought through many mediums
+                including Sound and Digital Arts.
+                His interest to inquire about different mediums has had him start Studio PROJECT
+                ZINK in Karachi where he uses tattooing and content of tattooing to explore and express
+                his narrative.
+             </p>
+        </div>
+        <div class="grid-item">
+            
+            <p class="heading-v">
+              <b>Artist Statement: Project Zink</b> <br>
+              Project Zink is a body of work created between 2019 and 2024, born from a deep
+              appreciation for traditional South Asian art and design. This project investigates the
+              intersection of my regional heritage with contemporary tattoo culture, fostering a
+              dialogue about how the consumption of imagery influences our identities over time.
+              I work with watercolors in Mughal miniature technique, as well as digitally. i really feel
+              mediums do not matter if there is a reach for broader audience. I draw parallels between
+              the images and symbols prevalent in contemporary tattoo design. The motifs and
+              patterns derived from my cultural heritage are intertwined with tattoo imagery,
+              reflecting the complexities of belonging and self-expression.
+              In Pakistan, tattoos are often viewed as unacceptable and contradictory to the prevailing
+              cultural norms. This societal perception introduces a layer of tension into my work,
+              underscoring the conflict between traditional values and modern expressions of identity.
+              While my designs may initially evoke Eastern and Turkish art, they are ultimately
+              inspired by the diverse visual language we encounter in today's digital landscape.
+              Through this synthesis of styles, Project Zink explores the intricate relationship between
+              cultural heritage and contemporary influences
+            </p>
+
+            <div>  
+        </div>
+       
+      </div>
+    </div>
+    
+    <div class="row-2 content-grid">
+        <div class="grid-item">
+            <p class="heading-v">
+                <b>Skills</b> <br>
+              Drawing, Painting, Digital Arts, ArtDirection, Concept development,
+              Setand stage Design,Research,Illustration,
+              </p>
+              
+        </div>
+        <div class="grid-item">
+            <ul class="a">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+              </ul>
+            <div>  
+        </div>
+       
+      </div>
+    </div>
+</body>
+</html>
+
+
+
+

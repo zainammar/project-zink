@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/profile-zone-ez.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Zain ul Mursaleen</title>
+</head>
+<body>
+  <style>
+    body {
+  background-color: #DFD0B8;
+}
+
+    .cursor {
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 123, 255, 0.5);
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        transition: transform 0.1s;
+        transform: translate(-50%, -50%);
+        display: none; /* Hidden by default */
+    }
+    /* box */
+    .box {
+        background-color: #DFD0B8;
+        color:#153448;
+        margin: 20px;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+    
+    .box:hover {
+        transform: scale(1.1);
+        background-color: #948979;
+        color:#DFD0B8;
+    }
+        </style>  
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            .zoom {
+              padding: 50px;
+              transition: transform .2s;
+              width: 400px;
+              height: 400px;
+              margin: 0 auto;
+            }
+            
+            .zoom:hover {
+              -ms-transform: scale(5); /* IE 9 */
+              -webkit-transform: scale(5); /* Safari 3-8 */
+              transform: scale(5); 
+            }
+            </style>   
+ <!-- Row with 1 column Navbar -->
+ <div class="row-1">
+  <div class="topnav-2" id="myTopnav-2">
+      <a href="index.html" class="active">About Me</a>
+      <a href="about.html">Art</a>
+      <a href="product.html">Digtal Art</a>
+      <a href="contact.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction3()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <script>
+        function myFunction3() {
+          var x = document.getElementById("myTopnav-2");
+          if (x.className === "topnav-2") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav-2";
+          }
+        }
+        </script>
+
+
+
+<div class="row-2 content-grid">
+  
+    <div class="grid-item">
+        <div class="zoom">
+            <img src="images/4.png" alt="Placeholder Image">
+        
+        </div>
+        
+    </div>
+    <div class="grid-item">
+        <h1>Zoom on Hover</h1>
+        <p>Hover over the div element.</p>
+        
+    </div>
+</div>
+   
+</div>
+<div class="cursor"></div>
+<!-- video BG section 1-->
+
+
+</body>
+</html>

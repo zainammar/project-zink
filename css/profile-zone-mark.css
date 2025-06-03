@@ -1,0 +1,606 @@
+/* Top imageslider     */
+body {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 800px; /* adjust to your image height */
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: pan-left 60s linear infinite;
+}
+
+.slider-track img {
+  height: 800px;
+  width: auto;
+  flex-shrink: 0;
+  margin-right: 10px; /* optional spacing */
+}
+
+@keyframes pan-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+    /* Basic reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+      }
+      
+      /* Fixed position navbar */
+      .navbar {
+        position: fixed;         /* Fixes the navbar at the top of the page */
+        top: 0;                  /* Align to the top */
+        left: 50%;               /* Start at the center horizontally */
+        transform: translateX(-50%); /* Offsets the navbar to truly center it */
+        background-color: #333;  /* Dark background for navbar */
+        width: 100%;             /* Make the navbar span full width */
+        z-index: 1000;           /* Ensures navbar stays on top of other content */
+        padding: 10px 0;         /* Vertical padding */
+      }
+      
+      .navbar ul {
+        list-style-type: none;   /* Removes default list styling */
+        display: flex;           /* Enables flexbox to align items */
+        justify-content: center; /* Centers the items horizontally */
+      }
+      
+      .navbar li {
+        margin: 0 20px;          /* Horizontal spacing between items */
+      }
+      
+      .navbar a {
+        color: white;            /* Text color */
+        text-decoration: none;   /* Removes underline from links */
+        font-size: 22px;         /* Font size */
+        padding: 10px 15px;      /* Padding around each link */
+      }
+      
+      .navbar a:hover {
+        background-color: #555;  /* Darker background on hover */
+        border-radius: 5px;      /* Slight rounding of corners */
+      }
+
+    /* Slider */
+
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      background-color: rgba(0,0,0,0.8);
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color:red;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      background-color: #bbb;
+      color: #650000;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 40%;
+      text-align:left;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: rgb(250, 0, 0);
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+/* zoom */
+
+.zoom {
+   
+    transition: transform .2s;
+    width:100%;
+    height:auto;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+
+  /* ez-css start here*/
+
+  /* BG videos */
+
+      /* Container for Grid */
+.grid-container-v {
+  display: grid;
+  position: relative;
+  /* width: 100%;
+  height: 100vh; */
+  overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Keeps video behind other content */
+  background-color: rgb(126, 126, 126);
+  opacity:0.3;
+}
+
+/* Grid Content */
+.content-grid {
+  display: grid;
+  gap: 10px;
+}
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 300px; /* First column 200px, second column 300px */
+  
+}
+
+.grid-item {
+  padding:10px;
+  
+}
+
+/* Mobile First - 1 column for all rows */
+.row-1, .row-2, .row-3, .row-4 {
+  display: grid;
+ 
+  
+ 
+}
+
+/* Desktop View */
+@media screen and (min-width: 768px) {
+
+  /* 1 column, 1 row (remains the same) */
+  .row-1 {
+      grid-template-columns: 1fr;
+     
+  }
+
+  /* 2 columns, 1 row */
+  .row-2 {
+      grid-template-columns: 1fr 1fr;
+      
+  }
+
+  /* 3 columns, 1 row */
+  .row-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+     
+  }
+
+  /* 4 columns, 1 row */
+  .row-4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+     
+  }
+
+  /* 5 columns, 1 row */
+  .row-5 {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+   
+}
+
+    /*6 columns, 1 row */
+    .row-6 {
+      grid-template-columns: 1fr 3fr 1fr;
+     
+  }
+
+}
+
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+ /* Heading & Text */
+
+ .heading-1{
+  font-family: 'Playfair Display', serif;
+  font-size:3rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height:1.5;
+  color: #010000;
+}
+
+.heading-3{
+  font-family: 'Playfair Display', serif;
+  font-size:2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height:1.5;
+  color: #010000;
+}
+.heading-v{
+  font-family: 'Playfair Display', serif;
+  font-size:large;
+  line-height:1.5;
+  color: black;
+  word-wrap: break-word;
+
+}
+
+.heading-x{
+  font-family: 'Playfair Display', serif;
+  font-size:xx-large;
+  line-height:1.5;
+  color: #000000;
+  padding:10px;
+  margin:10px;
+
+}
+
+.heading-y{
+  font-family: 'Playfair Display', serif;
+  font-size:3rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height:1.5;
+  color: #000000;
+
+}
+.heading-z{
+  font-family: "Roboto", serif;
+  font-size:1.5rem;
+  line-height:1.5;
+  color: white;
+
+}
+.name-1 {
+  font-family: 'Playfair Display', serif;
+  background-color: #3C5B6F;
+  border: none;
+  color:#DFD0B8;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font: size 3rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding-top: 15px;
+}
+/* image with text */
+
+.container-img {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  li{
+    font-family: 'Playfair Display', serif;
+    font-size:large;
+    line-height:1.5;
+    word-wrap: break-word;
+    color: black; 
+  }
+
+  /* Backround */
+
+  .bg-1{
+    background: linear-gradient(#09203f, #537895);
+    
+  }
+  
+  .bg-2{
+    background-color:  #153448;
+  }
+  .bg-3{
+    background-color:  #3C5B6F;
+  }
+  .bg-4{
+    background-color:  #948979;
+  }
+  
+  .bg-5{
+    background-color:  #DFD0B8;
+  }
+
+  .button-1 {
+    background-color:#948979;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border: none;
+    overflow: hidden;
+  }
+  .button-1:hover {
+    background-color:#000000;
+    color: #ffffff;
+  }
+  
+  .button-2 {
+    background-color:#153448;
+    border-radius: 8px;
+    border-width: 0;
+    color: #DFD0B8;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  .button-2:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+  /* Respnosive Gallary */
+  .header {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    text-align: center;
+    padding: 32px;
+    margin-bottom:10px;
+    margin-top:10px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+/* Slider Top */
+
+body {font-family: Verdana, sans-serif; margin:0}
+
+/* Slideshow container */
+.slideshow-container {
+position: relative;
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 53%, rgba(0,212,255,1) 100%);
+}
+
+/* Slides */
+.zain-slider-1 {
+display: none;
+padding: 80px;
+text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -30px;
+padding: 16px;
+color: #888;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+position: absolute;
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 10px;
+  background: black;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color:white;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+background-image: linear-gradient(to right, #948979 0%, #DFD0B8 100%);
+}
+
+
+q {font-style: italic;}
+
+
+.text-1 {color:#ffffff;font-family: 'Playfair Display', serif;}
+
+
+.text-anim-1 {
+font-size:20px;
+position: relative;
+animation: mymove-1-a 4s;
+animation-fill-mode: forwards;
+animation-iteration-count: infinte;
+animation-delay: 0s;
+}
+
+@keyframes mymove-1-a {
+0% {top: 0px;opacity: 0;font-size:40px;}
+50% {top: 40px;opacity:1;font-size:40px;}
+100% {top: 0px;opacity: 0;font-size:40px;}
+}
+
+.jk{
+background-color:red;
+}
